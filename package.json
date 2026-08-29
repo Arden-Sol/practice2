@@ -7,7 +7,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch src/server.js",
+    "prod": "node --env-file=./env/.env.production dist/src/server.js",
+    "dev": "node --env-file=./env/.env.development --watch src/server.js",
     "lint": "eslint \"src/**/*.js\"",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
@@ -17,7 +18,8 @@
     "npm": ">11"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "zod": "^4.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
