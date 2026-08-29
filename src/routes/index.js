@@ -1,5 +1,6 @@
 import express from 'express';
 import { userRouter } from './user.route.js';
+import { searchRouter } from './search.route.js';
 
 export const router = express.Router();
 
@@ -11,3 +12,4 @@ router.get('/', (req, res) => {
 });
 
 router.use('/users', userRouter);
+router.use('/search', searchRouter);
