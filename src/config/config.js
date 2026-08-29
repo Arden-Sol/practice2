@@ -7,7 +7,7 @@ const envSchema = z.object({
 
 const parseEnvironment = () => {
   try {
-    returnenvSchema.parse({
+    return envSchema.parse({
       NODE_ENV: process.env.NODE_ENV,
       PORT: process.env.PORT,
     });

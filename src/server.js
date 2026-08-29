@@ -1,11 +1,17 @@
 import express from 'express';
+import { logger } from './middlewares/logger.js';
+import { config } from './config/config.js';
+import { cors } from './middlewares/cors.js';
 
 const app = express.Router();
+
+app.use(cors);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(logger);
 
-app.listen(5001, () => {
-  console.log(`서버가 실행중: ${5001}`);
+app.listen(config.PORT, () => {
+  console.log(`서버가 실행중: ${config.PORT}`);
 });
