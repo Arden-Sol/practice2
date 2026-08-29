@@ -3,7 +3,7 @@ import { logger } from './middlewares/logger.js';
 import { config } from './config/config.js';
 import { cors } from './middlewares/cors.js';
 
-const app = express.Router();
+const app = express();
 
 app.use(cors);
 

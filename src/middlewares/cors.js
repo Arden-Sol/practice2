@@ -1,4 +1,4 @@
-import { isDevelopment, isProduction } from '../config/config';
+import { isDevelopment, isProduction } from '../config/config.js';
 
 export const cors = (req, res, next) => {
   const whiteList =
